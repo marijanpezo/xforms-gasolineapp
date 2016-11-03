@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+
+  <Identity Name="2505d61a-aabb-4d34-a028-ec7634a9f7ae"
+            Publisher="CN=Marijan"
+            Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>GasolineApp.Windows</DisplayName>
+    <PublisherDisplayName>Marijan</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="GasolineApp.Windows.App">
+      <m2:VisualElements
+          DisplayName="GasolineApp.Windows"
+          Square150x150Logo="Assets\Logo.png"
+          Square30x30Logo="Assets\SmallLogo.png"
+          Description="GasolineApp.Windows"
+          ForegroundText="light"
+          BackgroundColor="#464646">
+        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

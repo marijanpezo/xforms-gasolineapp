@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GasolineApp.Views.NewRefill"
+             Padding ="4,4,4,0">
+
+  <Page.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Label" x:Key="labelStyle">
+        <Setter Property="TextColor" Value="Navy"/>
+        <Setter Property="FontSize" Value="28"/>
+      </Style>
+    </ResourceDictionary>
+  </Page.Resources>
+
+
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+        
+          <Label x:Name="labelVehicle" 
+                 Text="Vehicle" 
+                 Grid.Row="0" 
+                 Grid.Column="0" 
+                 Style="{StaticResource labelStyle}"/>
+            
+          <Button x:Name="buttonVehicle" 
+                  HorizontalOptions="Fill" 
+                  Text="Vehicles" 
+                  Grid.Row="0" 
+                  Grid.Column="1" 
+                  Command="{Binding OnClickedVehicle}" />
+          
+            <Label x:Name="labelPickedVehicle" 
+                   VerticalOptions="Center"
+                   Text="{Binding Vehicles.Name}" 
+                   Grid.Row="1" 
+                   Grid.Column="0" 
+                   Grid.ColumnSpan="2"/>
+        
+        </Grid>
+        
+        <Label x:Name="labelMilage" Text="Milage" Style="{StaticResource labelStyle}"/>
+        <Entry x:Name="entryMilage" Text="{Binding Mileage}" Keyboard="Numeric"/>
+        
+        <Label x:Name="labelLiter" Text="Liter" Margin="0,20,0,0" Style="{StaticResource labelStyle}"/>
+        <Entry x:Name="entryLiter" Keyboard="Numeric"/>
+        
+        <Label x:Name="labelPricePerLiter" Margin="0,20,0,0" Text="Price Per Liter" Style="{StaticResource labelStyle}"/>
+        <Entry x:Name="entryPricePerLiter" Keyboard="Numeric"/>
+
+        <Button x:Name="buttonRefill" Text="Refill" Margin="0,40,0,0" Command="{Binding buttonRefillClicked}"/>
+                  
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+
+</ContentPage>

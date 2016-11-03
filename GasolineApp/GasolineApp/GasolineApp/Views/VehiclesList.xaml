@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GasolineApp.Views.VehiclesList">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="Data">
+                <ViewCell >
+                    <Grid >
+                        <Label HorizontalTextAlignment="Start" 
+                               VerticalTextAlignment="Center"
+                               FontSize="Large"
+                               Text="{Binding Name}"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+<StackLayout Margin="4,4,4,0">
+        <ListView x:Name="listViewVehicle" 
+                  ItemsSource="{Binding vehicles}"  
+                  ItemTemplate="{StaticResource Data}" 
+                  SeparatorColor="Red"/>
+
+        <Button x:Name="buttonPick" Text="Pick" />
+  </StackLayout>
+
+
+</ContentPage>

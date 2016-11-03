@@ -1,0 +1,16 @@
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\obj\Debug\WcfJsonVehiclesService.csprojResolveAssemblyReference.cache
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\WcfJsonVehiclesService.dll.config
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\WcfJsonVehiclesService.dll
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\WcfJsonVehiclesService.pdb
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\GasolineApp.dll
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\GasolineApp.pdb
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\obj\Debug\WcfJsonVehiclesService.dll
+C:\Users\Marijan\Desktop\RMA\GasolineApp\WcfJsonVehiclesService\obj\Debug\WcfJsonVehiclesService.pdb
