@@ -24,7 +24,7 @@ namespace GasolineApp.Model
 
         public decimal Price { get; set; }
 
-        public IList<Vehicle> Vehicles { get; set; }
+        public Vehicle Vehicle { get; set; }
 
     }
 }

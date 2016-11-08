@@ -1,4 +1,6 @@
-﻿using GasolineApp.ViewModel;
+﻿using GalaSoft.MvvmLight.Messaging;
+using GasolineApp.Model;
+using GasolineApp.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +27,14 @@ namespace GasolineApp.Views
 
             BindingContext = new NewRefillViewModel();
 
+            Messenger.Default.Register<Vehicle>(this, (vehicle) =>
+            {
+                labelPickedVehicle.Text = vehicle.Name;
+            });
+
         }
+
+
         async private void OnButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new VehiclesList());
@@ -34,6 +43,17 @@ namespace GasolineApp.Views
         async private void buttonRefill_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Stat());
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Messenger.Default.Register<Vehicle>(this, (vehicle) =>
+            {
+                labelPickedVehicle.Text = vehicle.Name;
+            });
+
         }
     }
 }

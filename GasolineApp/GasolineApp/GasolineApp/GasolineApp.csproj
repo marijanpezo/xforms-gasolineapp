@@ -36,9 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Data\VehicleItemDatabase.cs" />
     <Compile Include="Interfaces\INavigationService.cs" />
-    <Compile Include="ISQLite.cs" />
     <Compile Include="Model\Refill.cs" />
     <Compile Include="Model\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

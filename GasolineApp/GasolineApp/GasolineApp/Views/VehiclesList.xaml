@@ -19,14 +19,13 @@
     </Page.Resources>
 
 
-<StackLayout Margin="4,4,4,0">
+    <StackLayout Margin="4,4,4,0">
         <ListView x:Name="listViewVehicle" 
                   ItemsSource="{Binding vehicles}"  
                   ItemTemplate="{StaticResource Data}" 
-                  SeparatorColor="Red"/>
-
-        <Button x:Name="buttonPick" Text="Pick" />
-  </StackLayout>
+                  SeparatorColor="Red"
+                  ItemSelected="listViewVehicle_ItemSelected"/>
+    </StackLayout>
 
 
 </ContentPage>

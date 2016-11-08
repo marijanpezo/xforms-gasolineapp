@@ -20,13 +20,9 @@ namespace GasolineApp.Views {
         private global::Xamarin.Forms.ListView listViewVehicle;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Button buttonPick;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(VehiclesList));
             listViewVehicle = this.FindByName<global::Xamarin.Forms.ListView>("listViewVehicle");
-            buttonPick = this.FindByName<global::Xamarin.Forms.Button>("buttonPick");
         }
     }
 }

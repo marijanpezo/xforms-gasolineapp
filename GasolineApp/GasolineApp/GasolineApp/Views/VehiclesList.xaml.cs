@@ -1,4 +1,5 @@
-﻿using GasolineApp.Model;
+﻿using GalaSoft.MvvmLight.Messaging;
+using GasolineApp.Model;
 using GasolineApp.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -20,13 +21,21 @@ namespace GasolineApp.Views
             InitializeComponent();
             Title = "Vehicles";
 
-            buttonPick.FontSize = 30;
-            buttonPick.BackgroundColor = Color.Blue;
-            buttonPick.TextColor = Color.White;
-
             BindingContext = new VehiclesViewModel();
 
+            
+        }
 
+        private void listViewVehicle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+            if (e.SelectedItem == null)
+            {
+                return; 
+            }
+
+            Messenger.Default.Send((Vehicle)e.SelectedItem);
+            Navigation.PopAsync();
         }
     }
 }

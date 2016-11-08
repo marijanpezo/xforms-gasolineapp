@@ -42,7 +42,7 @@
           
             <Label x:Name="labelPickedVehicle" 
                    VerticalOptions="Center"
-                   Text="{Binding Vehicles.Name}" 
+                   Text="---" 
                    Grid.Row="1" 
                    Grid.Column="0" 
                    Grid.ColumnSpan="2"/>

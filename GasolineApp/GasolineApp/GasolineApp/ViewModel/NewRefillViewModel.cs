@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Messaging;
 using GasolineApp.Model;
 using GasolineApp.Services;
 using GasolineApp.Views;
@@ -13,10 +14,11 @@ using Xamarin.Forms;
 
 namespace GasolineApp.ViewModel
 {
-    public class NewRefillViewModel: ViewModelBase
+    public class NewRefillViewModel : ViewModelBase
     {
         public ICommand OnClickedVehicle { get; private set; }
-        public ICommand buttonRefillClicked { get; }
+        public ICommand buttonRefillClicked { get; private set; }
+
 
         long mileage;
         public long Mileage
@@ -51,7 +53,10 @@ namespace GasolineApp.ViewModel
 
         public NewRefillViewModel()
         {
+            Refill refillSend = new Refill();
+
             var navigation = new NavigationService();
+
 
             OnClickedVehicle = new Command(() =>
             {
@@ -60,7 +65,12 @@ namespace GasolineApp.ViewModel
 
             buttonRefillClicked = new Command(() =>
             {
-                Refill refillSend = new Refill();
+
+                Messenger.Default.Register<Vehicle>(this, (vehicle) =>
+                {
+                    refillSend.Vehicle = vehicle;
+                });
+
 
                 refillSend.Date = DateTime.Today;
                 refillSend.Litres = liter;
@@ -68,7 +78,7 @@ namespace GasolineApp.ViewModel
                 refillSend.PricePerLitre = pricePerLiter;
                 refillSend.Price = pricePerLiter * liter;
 
-
+                Messenger.Default.Unregister(this);
                 navigation.NavigateToNextPage(new Stat());
             });
         }
