@@ -27,11 +27,6 @@ namespace GasolineApp.Views
 
             BindingContext = new NewRefillViewModel();
 
-            Messenger.Default.Register<Vehicle>(this, (vehicle) =>
-            {
-                labelPickedVehicle.Text = vehicle.Name;
-            });
-
         }
 
 
@@ -51,9 +46,9 @@ namespace GasolineApp.Views
 
             Messenger.Default.Register<Vehicle>(this, (vehicle) =>
             {
+                
                 labelPickedVehicle.Text = vehicle.Name;
             });
-
         }
     }
 }

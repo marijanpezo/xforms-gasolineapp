@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using GasolineApp.Data;
 using Xamarin.Forms;
 
 namespace GasolineApp.ViewModel
@@ -18,6 +19,10 @@ namespace GasolineApp.ViewModel
     {
         public ICommand OnClickedVehicle { get; private set; }
         public ICommand buttonRefillClicked { get; private set; }
+
+        private Refill refillSend = new Refill();
+
+        //public RefillDatabase refillDatabase;
 
 
         long mileage;
@@ -53,9 +58,19 @@ namespace GasolineApp.ViewModel
 
         public NewRefillViewModel()
         {
-            Refill refillSend = new Refill();
+            if (refillSend != null)
+            {
+                refillSend = new Refill();
+            }
+            refillSend = new Refill();
+
 
             var navigation = new NavigationService();
+
+            Messenger.Default.Register<Vehicle>(this, vehicle =>
+            {
+                refillSend.Vehicle = vehicle;
+            });
 
 
             OnClickedVehicle = new Command(() =>
@@ -63,23 +78,29 @@ namespace GasolineApp.ViewModel
                 navigation.NavigateToNextPage(new VehiclesList());
             });
 
-            buttonRefillClicked = new Command(() =>
+            buttonRefillClicked = new Command( () =>
             {
-
-                Messenger.Default.Register<Vehicle>(this, (vehicle) =>
-                {
-                    refillSend.Vehicle = vehicle;
-                });
-
+                
+                //refillDatabase= new RefillDatabase();
 
                 refillSend.Date = DateTime.Today;
                 refillSend.Litres = liter;
-                refillSend.Mileages = mileage;
                 refillSend.PricePerLitre = pricePerLiter;
                 refillSend.Price = pricePerLiter * liter;
+                refillSend.Mileages = 0;
+                refillSend.Mileages = mileage - refillSend.Vehicle.Mileage;
 
-                Messenger.Default.Unregister(this);
+                
+
+                //refillDatabase.AddRefill(refillSend);
+
                 navigation.NavigateToNextPage(new Stat());
+
+
+
+                Messenger.Default.Send(refillSend);
+                Messenger.Default.Unregister(this);
+
             });
         }
 

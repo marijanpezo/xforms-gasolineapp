@@ -17,8 +17,12 @@ namespace GasolineApp.Views {
     public partial class PriceTabbed : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.ListView listViewMileage;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(PriceTabbed));
+            listViewMileage = this.FindByName<global::Xamarin.Forms.ListView>("listViewMileage");
         }
     }
 }

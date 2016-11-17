@@ -53,10 +53,10 @@
         <Entry x:Name="entryMilage" Text="{Binding Mileage}" Keyboard="Numeric"/>
         
         <Label x:Name="labelLiter" Text="Liter" Margin="0,20,0,0" Style="{StaticResource labelStyle}"/>
-        <Entry x:Name="entryLiter" Keyboard="Numeric"/>
+        <Entry x:Name="entryLiter" Text="{Binding Liter}" Keyboard="Numeric"/>
         
         <Label x:Name="labelPricePerLiter" Margin="0,20,0,0" Text="Price Per Liter" Style="{StaticResource labelStyle}"/>
-        <Entry x:Name="entryPricePerLiter" Keyboard="Numeric"/>
+        <Entry x:Name="entryPricePerLiter" Text="{Binding PricePerLiter}" Keyboard="Numeric"/>
 
         <Button x:Name="buttonRefill" Text="Refill" Margin="0,40,0,0" Command="{Binding buttonRefillClicked}"/>
                   

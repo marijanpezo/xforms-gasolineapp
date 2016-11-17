@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Vehicles>
+  <Vehicle>
+    <Id>1</Id>
+    <Name>Audi A6</Name>
+    <Fuel>Diesel</Fuel>
+    <Mileage>116000</Mileage>
+  </Vehicle>
+  <Vehicle>
+    <Id>2</Id>
+    <Name>Volvo S80</Name>
+    <Fuel>Diesel</Fuel>
+    <Mileage>220000</Mileage>
+  </Vehicle>
+  <Vehicle>
+    <Id>3</Id>
+    <Name>Polo A04</Name>
+    <Fuel>Diesel</Fuel>
+    <Mileage>180000</Mileage>
+  </Vehicle>
+  <Vehicle>
+    <Id>4</Id>
+    <Name>Volvo XC60</Name>
+    <Fuel>Diesel</Fuel>
+    <Mileage>190000</Mileage>
+  </Vehicle>
+  <Vehicle>
+    <Id>5</Id>
+    <Name>Passat B5</Name>
+    <Fuel>Diesel</Fuel>
+    <Mileage>250000</Mileage>
+  </Vehicle>
+</Vehicles>

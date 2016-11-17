@@ -36,12 +36,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Data\RefillDatabase.cs" />
     <Compile Include="Interfaces\INavigationService.cs" />
+    <Compile Include="Interfaces\ISQLite.cs" />
     <Compile Include="Model\Refill.cs" />
     <Compile Include="Model\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="ViewModel\LiterTabbedViewModel.cs" />
+    <Compile Include="ViewModel\MileageTabbedViewModel.cs" />
     <Compile Include="ViewModel\NewRefillViewModel.cs" />
+    <Compile Include="ViewModel\PriceTabbedViewModel.cs" />
     <Compile Include="ViewModel\VehiclesViewModel.cs" />
     <Compile Include="Views\LiterTabbed.xaml.cs">
       <DependentUpon>LiterTabbed.xaml</DependentUpon>

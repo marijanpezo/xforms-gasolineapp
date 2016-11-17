@@ -34,7 +34,6 @@ C:\Users\Marijan\Desktop\RMA\GasolineApp\GasolineApp\GasolineApp\obj\Debug\Gasol
 C:\Users\Marijan\Desktop\RMA\GasolineApp\GasolineApp\GasolineApp\obj\Debug\GasolineApp.Views.Registry.xaml.g.cs
 C:\Users\Marijan\Desktop\RMA\GasolineApp\GasolineApp\GasolineApp\obj\Debug\GasolineApp.dll.mdb
 C:\Users\Marijan\Desktop\RMA\GasolineApp\GasolineApp\GasolineApp\bin\Debug\GasolineApp.dll.mdb
-C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\obj\Debug\GasolineApp.csprojResolveAssemblyReference.cache
 C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\obj\Debug\GasolineApp.Views.NewRefill.xaml.g.cs
 C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\obj\Debug\GasolineApp.Views.VehiclesList.xaml.g.cs
 C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\obj\Debug\GasolineApp.Views.Stat.xaml.g.cs
@@ -68,5 +67,6 @@ C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineAp
 C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\obj\Debug\GasolineApp.csprojResolveAssemblyReference.cache
 C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\obj\Debug\GasolineApp.dll.mdb
 C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\bin\Debug\GasolineApp.dll.mdb

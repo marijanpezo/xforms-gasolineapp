@@ -10,9 +10,41 @@
                 <Setter Property="FontSize" Value="28"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
+
+            <DataTemplate x:Key="DataMileage">
+                <ViewCell >
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="Center"
+                               FontSize="Large"
+                               Style="{StaticResource Key=labelStyle}"
+                               Text="{Binding Date, StringFormat = '{0:dd.MM.yyyy}'}"
+                               Grid.Column="0"/>
+                        <Label HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="Center"
+                               FontSize="Large"
+                                Style="{StaticResource Key=labelStyle}"
+                               Text="{Binding Mileages}"
+                               Grid.Column="1"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
         </ResourceDictionary>
     </Page.Resources>
-  
-    <Label Text="Summ kilometers: " Style="{StaticResource labelStyle}"/>
+
+    <StackLayout>
+        <ListView x:Name="listViewMileage"
+                      ItemsSource="{Binding refills}"
+                      ItemTemplate="{StaticResource DataMileage}"
+                      ItemSelected="ListViewMileage_OnItemSelected"/>
+<!--
+        <Label Text="Sum kilometers: " Style="{StaticResource labelStyle}"/>
+-->
+    </StackLayout>
+    
 
 </ContentPage>

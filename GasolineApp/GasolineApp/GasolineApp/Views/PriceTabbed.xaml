@@ -11,10 +11,49 @@
                 <Setter Property="FontSize" Value="28"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
+
+            <DataTemplate x:Key="DataPrice">
+                <ViewCell >
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="Center"
+                               FontSize="Large"
+                               Style="{StaticResource Key=labelStyle}"
+                               Text="{Binding Date, StringFormat = '{0:dd.MM.yyyy}'}"
+                               Grid.Column="0"/>
+                        <Label HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="Center"
+                               FontSize="Large"
+                                Style="{StaticResource Key=labelStyle}"
+                               Text="{Binding PricePerLitre, StringFormat='{0:F2}'}"
+                               Grid.Column="1"/>
+                        <Label HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="Center"
+                               FontSize="Large"
+                                Style="{StaticResource Key=labelStyle}"
+                               Text="{Binding Price, StringFormat='{0:F2}'}"
+                               Grid.Column="2"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
         </ResourceDictionary>
     </Page.Resources>
 
-    <Label Text="Sum price: " Style="{StaticResource labelStyle}"/>
+    <StackLayout>
+        <ListView x:Name="listViewMileage"
+                      ItemsSource="{Binding refills}"
+                      ItemTemplate="{StaticResource DataPrice}"
+                      ItemSelected="ListViewMileage_OnItemSelected"/>
+<!--
+        <Label Text="Sum price: " Style="{StaticResource labelStyle}"/>
+-->
+    </StackLayout>
+    
     
     
 </ContentPage>

@@ -1,0 +1,2 @@
+C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp.UWP\GasolineApp.UWP.csproj;x64
+C:\Users\Marijan\Documents\xforms-gasolineapp\GasolineApp\GasolineApp\GasolineApp\GasolineApp.csproj;neutral

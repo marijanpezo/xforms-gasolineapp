@@ -11,9 +11,41 @@
                 <Setter Property="FontSize" Value="28"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
+
+            <DataTemplate x:Key="DataLiter">
+                <ViewCell >
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="Center"
+                               FontSize="Large"
+                               Style="{StaticResource Key=labelStyle}"
+                               Text="{Binding Date, StringFormat = '{0:dd.MM.yyyy}'}"
+                               Grid.Column="0"/>
+                        <Label HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="Center"
+                               FontSize="Large"
+                               Style="{StaticResource Key=labelStyle}"
+                               Text="{Binding Litres}"
+                               Grid.Column="1"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
         </ResourceDictionary>
     </Page.Resources>
-    
-    <Label Text="Sum litras: " Style="{StaticResource labelStyle}"/>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listViewLitre"
+                      ItemsSource="{Binding refills}"
+                      ItemTemplate="{StaticResource DataLiter}"
+                      ItemSelected="listViewLitre_ItemSelected"/>
+
+<!--            <Label Text="Sum Litre:" Style="{StaticResource labelStyle}"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+        
     
 </ContentPage>
