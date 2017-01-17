@@ -43,7 +43,7 @@
                       ItemTemplate="{StaticResource DataLiter}"
                       ItemSelected="listViewLitre_ItemSelected"/>
 
-<!--            <Label Text="Sum Litre:" Style="{StaticResource labelStyle}"/>-->
+            <Label Text="{Binding SumLiter, StringFormat='Sum Liter: {0}', Mode=TwoWay}"  Style="{StaticResource labelStyle}"/>
         </StackLayout>
     </ContentPage.Content>
         
